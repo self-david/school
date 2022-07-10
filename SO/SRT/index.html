@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>SRT Scheduler</title>
+        <link rel="stylesheet" href="./css/bootstrap.css" />
+        <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container mt-5 mb-5 text-center">
+            <h1 id="titulo" >Shortest Remaining Time</h1>
+            <h2 class="display-9 text-muted ">
+                Escalonamento de Processos
+            </h2>
+
+            <div id="form-card" class="card p-3">
+                <form id="process-form">
+                    <fieldset>
+                        <legend>Processos</legend>
+                        <div class="form-group">
+                            <label for="tempoChegada">Tiempo de llegada</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="tempoChegada"
+                                placeholder="Tiempo de llegada del processo"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="tempoExecucao">Tiempo de ejecucion</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="tempoExecucao"
+                                placeholder="Inicio o tiempo de ejecucion del processo"
+                            />
+                        </div>
+                        <button type="submit" class="btn btn-warning float-right" id="adicionarProcesso">
+                            Agregar processo
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="card p-3">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Tiempo de llegada</th>
+                            <th scope="col">Tiempo de ejecucion</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaDeProcessos"></tbody>
+                </table>
+            </div>
+
+            <div class="card p-3">
+                <button class="btn btn-danger" id="iniciarEscalonamento">
+                    Iniciar Escalonamento
+                </button>
+            </div>
+
+            <div class="card p-3 mt-5" id="cardEscalonamento">
+                <legend>Escalonamento</legend>
+                <div class="float-right">
+                    <span class="badge badge-danger">Fuera</span>
+                    <span class="badge badge-primary">Pronto</span>
+                    <span class="badge badge-success">Ejecutando</span>
+                </div>
+                <label id="tempo-atual-execucao" class="mt-4 float-right">Tempo: 0</label>
+                <div id="progressos"></div>
+            </div>
+        </div>
+    </body>
+    <script src="./js/Interface.js"></script>
+    <script src="./js/Fila.js"></script>
+    <script src="./js/Processo.js"></script>
+    <script src="./js/Scheduler.js"></script>
+    <script src="./app.js"></script>
+</html>
