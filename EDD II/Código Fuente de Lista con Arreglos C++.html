@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es-mx" xml:lang="es-mx">
+<head>
+    <title>2018B_I5886: Código Fuente de Lista con Arreglos C++</title>
+    <link rel="shortcut icon" href="https://moodle.estructurasdedatos.net/theme/image.php/boost/theme/1527034896/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, 2018B_I5886: Código Fuente de Lista con Arreglos C++" />
+<link rel="stylesheet" type="text/css" href="https://moodle.estructurasdedatos.net/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://moodle.estructurasdedatos.net/theme/styles.php/boost/1527034896_1/all" />
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/moodle.estructurasdedatos.net","sesskey":"EwZbvCzfsf","themerev":"1527034896","slasharguments":1,"theme":"boost","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1527034896","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Cd de M\u00e9xico","contextid":1330};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/moodle.estructurasdedatos.net\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/moodle.estructurasdedatos.net\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/moodle.estructurasdedatos.net\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/moodle.estructurasdedatos.net\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/moodle.estructurasdedatos.net\/theme\/yui_combo.php?m\/1527034896\/","combine":true,"comboBase":"https:\/\/moodle.estructurasdedatos.net\/theme\/yui_combo.php?","ext":false,"root":"m\/1527034896\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-qtype_ddimageortext-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-qtype_ddimageortext-form":{"requires":["moodle-qtype_ddimageortext-dd","form_filepicker"]},"moodle-qtype_ddmarker-dd":{"requires":["node","event-resize","dd","dd-drop","dd-constrain","graphics"]},"moodle-qtype_ddmarker-form":{"requires":["moodle-qtype_ddmarker-dd","form_filepicker","graphics","escape"]},"moodle-qtype_ddwtos-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_html-button":{"requires":["moodle-editor_atto-plugin","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/moodle.estructurasdedatos.net\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/moodle.estructurasdedatos.net\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1527034896\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/moodle.estructurasdedatos.net\/lib\/javascript.php\/1527034896\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/moodle.estructurasdedatos.net\/lib\/javascript.php\/1527034896\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.2\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body  id="page-mod-page-view" class="format-weeks  path-mod path-mod-page safari dir-ltr lang-es_mx yui-skin-sam yui3-skin-sam moodle-estructurasdedatos-net pagelayout-incourse course-8 context-1330 cmid-212 category-4 ">
+
+<div id="page-wrapper">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Saltar a contenido principal</a>
+</div><script type="text/javascript" src="https://moodle.estructurasdedatos.net/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script type="text/javascript" src="https://moodle.estructurasdedatos.net/lib/javascript.php/1527034896/lib/javascript-static.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+    <nav class="fixed-top navbar navbar-light bg-white navbar-expand moodle-has-zindex">
+    
+            <div data-region="drawer-toggle" class="d-inline-block mr-3">
+                <button aria-expanded="false" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left mr-1 btn-secondary" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav"><i class="icon fa fa-bars fa-fw " aria-hidden="true"  aria-label=""></i><span class="sr-only">Pánel lateral</span></button>
+            </div>
+    
+            <a href="https://moodle.estructurasdedatos.net" class="navbar-brand has-logo
+                    ">
+                    <span class="logo d-none d-sm-inline">
+                        <img src="https://moodle.estructurasdedatos.net/pluginfile.php/1/core_admin/logocompact/0x70/1527034896/unnamed.png" alt="EDDNET">
+                    </span>
+                <span class="site-name d-none d-md-inline">EDDNET</span>
+            </a>
+    
+            <ul class="navbar-nav d-none d-md-flex">
+                <!-- custom_menu -->
+                <li class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-5c1337f39be2c5c1337f39b24e4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+        Español - México ‎(es_mx)‎
+    </a>
+    <div class="dropdown-menu" aria-labelledby="drop-down-5c1337f39be2c5c1337f39b24e4">
+                <a class="dropdown-item" href="https://moodle.estructurasdedatos.net/mod/page/view.php?id=212&amp;lang=en" title="English ‎(en)‎">English ‎(en)‎</a>
+                <a class="dropdown-item" href="https://moodle.estructurasdedatos.net/mod/page/view.php?id=212&amp;lang=es_mx" title="Español - México ‎(es_mx)‎">Español - México ‎(es_mx)‎</a>
+    </div>
+</li>
+                <!-- page_heading_menu -->
+                
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <div class="d-none d-lg-block">
+                
+            </div>
+                <!-- navbar_plugin_output -->
+                <li class="nav-item">
+                <div class="popover-region collapsed popover-region-messages"
+    id="nav-message-popover-container" data-userid="314"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        aria-role="button"
+        aria-controls="popover-region-container-5c1337f39c1145c1337f39b24e5"
+        aria-haspopup="true"
+        aria-label="Mostrar ventana de mensajes sin nuevos mensajes"
+        tabindex="0">
+                <i class="icon fa fa-comment fa-fw " aria-hidden="true" title="Mostrar/Ocultar menú de mensajes" aria-label="Mostrar/Ocultar menú de mensajes"></i>
+        <div class="count-container hidden" data-region="count-container"></div>
+
+    </div>
+    <div 
+        id="popover-region-container-5c1337f39c1145c1337f39b24e5"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Ventana de notificación"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Mensajes</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <div class="newmessage-link">
+            <a href="https://moodle.estructurasdedatos.net/message/index.php?contactsfirst=1">Nuevo mensaje
+            </a>
+        </div>
+        <a class="mark-all-read-button"
+           href="#"
+           role="button"
+           title="Marcar todo como leído"
+           data-action="mark-all-read">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw " aria-hidden="true" title="Marcar todo como leído" aria-label="Marcar todo como leído"></i></span>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " aria-hidden="true" title="Cargando" aria-label="Cargando"></i></span>
+        </a>
+        <a href="https://moodle.estructurasdedatos.net/message/edit.php?id=314"
+           title="Preferencias de Mensaje">
+            <i class="icon fa fa-cog fa-fw " aria-hidden="true" title="Preferencias de Mensaje" aria-label="Preferencias de Mensaje"></i>
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="messages" data-region="messages" role="log" aria-busy="false" aria-atomic="false" aria-relevant="additions"></div>
+        <div class="empty-message" data-region="empty-message" tabindex="0">No hay mensajes</div>
+
+            </div>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " aria-hidden="true" title="Cargando" aria-label="Cargando"></i></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://moodle.estructurasdedatos.net/message/index.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Verlo todo</div>
+                    </div>
+                </a>
+    </div>
+</div><div class="popover-region collapsed popover-region-notifications"
+    id="nav-notification-popover-container" data-userid="314"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        aria-role="button"
+        aria-controls="popover-region-container-5c1337f39cd605c1337f39b24e6"
+        aria-haspopup="true"
+        aria-label="Mostrar ventana de notificación sin notificaciones nuevas"
+        tabindex="0">
+                <i class="icon fa fa-bell fa-fw " aria-hidden="true" title="Mostrar/Ocultar menú de notificaciones" aria-label="Mostrar/Ocultar menú de notificaciones"></i>
+        <div class="count-container hidden" data-region="count-container"></div>
+
+    </div>
+    <div 
+        id="popover-region-container-5c1337f39cd605c1337f39b24e6"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Ventana de notificación"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notificaciones</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button"
+           href="#"
+           title="Marcar todo como leído"
+           data-action="mark-all-read"
+           role="button">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw " aria-hidden="true" title="Marcar todo como leído" aria-label="Marcar todo como leído"></i></span>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " aria-hidden="true" title="Cargando" aria-label="Cargando"></i></span>
+        </a>
+        <a href="https://moodle.estructurasdedatos.net/message/notificationpreferences.php?userid=314"
+           title="Preferencias de notificación">
+            <i class="icon fa fa-cog fa-fw " aria-hidden="true" title="Preferencias de notificación" aria-label="Preferencias de notificación"></i>
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications"
+            data-region="all-notifications"
+            role="log"
+            aria-busy="false"
+            aria-atomic="false"
+            aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">Usted no tiene notificaciones</div>
+
+            </div>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " aria-hidden="true" title="Cargando" aria-label="Cargando"></i></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://moodle.estructurasdedatos.net/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Verlo todo</div>
+                    </div>
+                </a>
+    </div>
+</div>
+                </li>
+                <!-- user_menu -->
+                <li class="nav-item d-flex align-items-center">
+                    <div class="usermenu"><div class="action-menu moodle-actionmenu nowrap-items d-inline" id="action-menu-1" data-enhance="moodle-core-actionmenu">
+
+        <div class="menubar d-flex " id="action-menu-1-menubar" role="menubar">
+
+            
+
+
+                <div class="action-menu-trigger">
+                    <div class="dropdown">
+                        <a href="#" class=" dropdown-toggle" id="dropdown-1" title="" role="menuitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            
+                            <span class="userbutton"><span class="usertext mr-1">OSCAR SANDOVAL ARELLANO</span><span class="avatars"><span class="avatar current"><img src="https://moodle.estructurasdedatos.net/pluginfile.php/1519/user/icon/boost/f2?rev=104759" alt="Imagen de OSCAR SANDOVAL ARELLANO" title="Imagen de OSCAR SANDOVAL ARELLANO" class="userpicture" width="35" height="35" role="presentation" /></span></span></span>
+                                
+                            <b class="caret"></b>
+                        </a>
+                            <div class="dropdown-menu dropdown-menu-right menu  align-tr-br" id="action-menu-1-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-1" role="menu" data-align="tr-br">
+                                        <a href="https://moodle.estructurasdedatos.net/my/" class="dropdown-item menu-action" role="menuitem" data-title="mymoodle,admin" aria-labelledby="actionmenuaction-1">
+                                                <i class="icon fa fa-tachometer fa-fw " aria-hidden="true" title="Tablero" aria-label="Tablero"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-1">
+                                                Tablero
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="https://moodle.estructurasdedatos.net/user/profile.php?id=314" class="dropdown-item menu-action" role="menuitem" data-title="profile,moodle" aria-labelledby="actionmenuaction-2">
+                                                <i class="icon fa fa-user fa-fw " aria-hidden="true" title="Perfil" aria-label="Perfil"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-2">
+                                                Perfil
+                                            </span>
+                                        </a>
+                                        <a href="https://moodle.estructurasdedatos.net/grade/report/overview/index.php" class="dropdown-item menu-action" role="menuitem" data-title="grades,grades" aria-labelledby="actionmenuaction-3">
+                                                <i class="icon fa fa-table fa-fw " aria-hidden="true" title="Calificaciones" aria-label="Calificaciones"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-3">
+                                                Calificaciones
+                                            </span>
+                                        </a>
+                                        <a href="https://moodle.estructurasdedatos.net/message/index.php" class="dropdown-item menu-action" role="menuitem" data-title="messages,message" aria-labelledby="actionmenuaction-4">
+                                                <i class="icon fa fa-comment fa-fw " aria-hidden="true" title="Mensajes" aria-label="Mensajes"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-4">
+                                                Mensajes
+                                            </span>
+                                        </a>
+                                        <a href="https://moodle.estructurasdedatos.net/user/preferences.php" class="dropdown-item menu-action" role="menuitem" data-title="preferences,moodle" aria-labelledby="actionmenuaction-5">
+                                                <i class="icon fa fa-wrench fa-fw " aria-hidden="true" title="Preferencias" aria-label="Preferencias"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-5">
+                                                Preferencias
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="https://moodle.estructurasdedatos.net/login/logout.php?sesskey=EwZbvCzfsf" class="dropdown-item menu-action" role="menuitem" data-title="logout,moodle" aria-labelledby="actionmenuaction-6">
+                                                <i class="icon fa fa-sign-out fa-fw " aria-hidden="true" title="Salir" aria-label="Salir"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-6">
+                                                Salir
+                                            </span>
+                                        </a>
+                            </div>
+                    </div>
+                </div>
+
+        </div>
+
+</div></div>
+                </li>
+            </ul>
+            <!-- search_box -->
+    </nav>
+    
+
+    <div id="page" class="container-fluid">
+        <header id="page-header" class="row">
+    <div class="col-12 pt-3 pb-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="mr-auto">
+                    <div class="page-context-header"><div class="page-header-headings"><h1>I5886 - Estructuras de Datos I</h1></div></div>
+                    </div>
+
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div id="page-navbar">
+                        <nav role="navigation">
+    <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="https://moodle.estructurasdedatos.net/" >Página Principal (home)</a></li>
+                <li class="breadcrumb-item">Mis cursos</li>
+                <li class="breadcrumb-item"><a href="https://moodle.estructurasdedatos.net/course/view.php?id=8" title="I5886 - Estructuras de Datos I">2018B_I5886</a></li>
+                <li class="breadcrumb-item"><a href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-0" >General</a></li>
+                <li class="breadcrumb-item"><a href="https://moodle.estructurasdedatos.net/mod/page/view.php?id=212" title="Página">Código Fuente de Lista con Arreglos C++</a></li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="ml-auto d-flex">
+                        
+                    </div>
+                    <div id="course-header">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div id="page-content" class="row">
+            <div id="region-main-box" class="col-12">
+                <section id="region-main" >
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="notifications" id="user-notifications"></span>
+                            <div role="main"><span id="maincontent"></span><h2>Código Fuente de Lista con Arreglos C++</h2><div class="box generalbox center clearfix py-3"><div class="no-overflow"><!--?xml version="1.0" encoding="iso-8859-1"?-->
+<p></p>
+<pre><code><span style="font: 10pt monospace;"><span>  1  </span><span style="color: #00a000;">#ifndef LIST_H_INCLUDED</span>
+<span>  2  </span><span style="color: #00a000;">#define LIST_H_INCLUDED</span>
+<span>  3  </span>
+<span>  4  </span><span style="color: #000000; font-weight: bold;">/// list.h (c) 2016 by Alfredo Gutierrez</span>
+<span>  5  </span><span style="color: #000000; font-weight: bold;">/// list.h is licensed under a</span>
+<span>  6  </span><span style="color: #000000; font-weight: bold;">/// Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.</span>
+<span>  7  </span><span style="color: #000000; font-weight: bold;">/// You should have received a copy of the license along with this</span>
+<span>  8  </span><span style="color: #000000; font-weight: bold;">/// work. If not, see &lt;http://creativecommons.org/licenses/by-nc-sa/3.0/&gt;.</span>
+<span>  9  </span>
+<span> 10  </span><span style="color: #00a000;">#include &lt;exception&gt;</span>
+<span> 11  </span><span style="color: #00a000;">#include &lt;iostream&gt;</span>
+<span> 12  </span><span style="color: #00a000;">#include &lt;string&gt;</span>
+<span> 13  </span>
+<span> 14  </span><span style5="" style="color: #0000a0; font-weight: bold;">template </span><span style="color: #ff0000;">&lt;</span><span style5="" style="color: #0000a0; font-weight: bold;">class </span><span style="color: #000000;">T</span><span style="color: #ff0000;">, </span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">ARRAYSIZE </span><span style="color: #ff0000;">= </span><span style4="" style="color: #f000f0;">1024</span><span style="color: #ff0000;">&gt; </span><span style5="" style="color: #0000a0; font-weight: bold;">class </span><span style="color: #000000;">List </span><span style="color: #ff0000;">{</span>
+<span> 15      </span><span style5="" style="color: #0000a0; font-weight: bold;">private</span><span style="color: #ff0000;">:</span>
+<span> 16          </span><span style="color: #000000;">T</span><span style="color: #ff0000;">** </span><span style="color: #000000;">data</span><span style="color: #ff0000;">;</span>
+<span> 17          </span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">last</span><span style="color: #ff0000;">;</span>
+<span> 18  </span>
+<span> 19          </span><span style5="" style="color: #0000a0; font-weight: bold;">void </span><span style="color: #000000;">copyAll</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">const </span><span style="color: #000000;">List</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">l</span><span style="color: #ff0000;">) {</span>
+<span> 20              </span><span style="color: #000000;">deleteAll</span><span style="color: #ff0000;">();</span>
+<span> 21  </span>
+<span> 22              </span><span style5="" style="color: #0000a0; font-weight: bold;">for</span><span style="color: #ff0000;">(</span><span style="color: #000000;">last </span><span style="color: #ff0000;">= -</span><span style4="" style="color: #f000f0;">1</span><span style="color: #ff0000;">; </span><span style="color: #000000;">last </span><span style="color: #ff0000;">&lt; </span><span style="color: #000000;">l</span><span style="color: #ff0000;">.</span><span style="color: #000000;">last</span><span style="color: #ff0000;">; </span><span style="color: #000000;">data</span><span style="color: #ff0000;">[++</span><span style="color: #000000;">last</span><span style="color: #ff0000;">] = </span><span style5="" style="color: #0000a0; font-weight: bold;">new </span><span style="color: #000000;">T</span><span style="color: #ff0000;">(*</span><span style="color: #000000;">l</span><span style="color: #ff0000;">.</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">last</span><span style="color: #ff0000;">])) </span><span style5="" style="color: #0000a0; font-weight: bold;">if </span><span style="color: #ff0000;">(</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">last</span><span style="color: #ff0000;">] == </span><span style5="" style="color: #0000a0; font-weight: bold;">nullptr</span><span style="color: #ff0000;">) </span><span style5="" style="color: #0000a0; font-weight: bold;">throw </span><span style="color: #000000;">ListException</span><span style="color: #ff0000;">(</span><span style6="" style="color: #0000ff;">"Something went wrong in List constructor, memory not available"</span><span style="color: #ff0000;">);</span>
+<span> 23              </span><span style="color: #ff0000;">}</span>
+<span> 24  </span>
+<span> 25          </span><span style5="" style="color: #0000a0; font-weight: bold;">bool </span><span style="color: #000000;">isValidPos</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">const int</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">p</span><span style="color: #ff0000;">) {</span>
+<span> 26              </span><span style5="" style="color: #0000a0; font-weight: bold;">return </span><span style="color: #000000;">p </span><span style="color: #ff0000;">&gt;= </span><span style4="" style="color: #f000f0;">0 </span><span style="color: #000000;">or p </span><span style="color: #ff0000;">&lt;= </span><span style="color: #000000;">last</span><span style="color: #ff0000;">;</span>
+<span> 27              </span><span style="color: #ff0000;">}</span>
+<span> 28  </span>
+<span> 29          </span><span style5="" style="color: #0000a0; font-weight: bold;">void </span><span style="color: #000000;">sortData</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">const int</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">l</span><span style="color: #ff0000;">, </span><span style5="" style="color: #0000a0; font-weight: bold;">const int</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">r</span><span style="color: #ff0000;">) {</span>
+<span> 30              </span><span style5="" style="color: #0000a0; font-weight: bold;">if</span><span style="color: #ff0000;">(</span><span style="color: #000000;">l </span><span style="color: #ff0000;">&gt;= </span><span style="color: #000000;">r</span><span style="color: #ff0000;">)</span>
+<span> 31                  </span><span style5="" style="color: #0000a0; font-weight: bold;">return</span><span style="color: #ff0000;">;</span>
+<span> 32  </span>
+<span> 33              </span><span style5="" style="color: #0000a0; font-weight: bold;">if </span><span style="color: #ff0000;">(</span><span style="color: #000000;">l </span><span style="color: #ff0000;">+ </span><span style4="" style="color: #f000f0;">1 </span><span style="color: #ff0000;">== </span><span style="color: #000000;">r</span><span style="color: #ff0000;">) {</span>
+<span> 34                  </span><span style5="" style="color: #0000a0; font-weight: bold;">if</span><span style="color: #ff0000;">(*</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">l</span><span style="color: #ff0000;">] &gt; *</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">r</span><span style="color: #ff0000;">]) </span><span style="color: #00a000; font-weight: bold;">std</span><span style="color: #ff0000;">::</span><span style="color: #00a000; font-weight: bold;">swap</span><span style="color: #ff0000;">(</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">l</span><span style="color: #ff0000;">], </span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">r</span><span style="color: #ff0000;">]);</span>
+<span> 35  </span>
+<span> 36                  </span><span style5="" style="color: #0000a0; font-weight: bold;">return</span><span style="color: #ff0000;">;</span>
+<span> 37                  </span><span style="color: #ff0000;">}</span>
+<span> 38  </span>
+<span> 39              </span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">i </span><span style="color: #ff0000;">= </span><span style="color: #000000;">l</span><span style="color: #ff0000;">, </span><span style="color: #000000;">j </span><span style="color: #ff0000;">= </span><span style="color: #000000;">r</span><span style="color: #ff0000;">;</span>
+<span> 40  </span>
+<span> 41              </span><span style5="" style="color: #0000a0; font-weight: bold;">while</span><span style="color: #ff0000;">(</span><span style="color: #000000;">i </span><span style="color: #ff0000;">&lt; </span><span style="color: #000000;">j</span><span style="color: #ff0000;">) {</span>
+<span> 42                  </span><span style5="" style="color: #0000a0; font-weight: bold;">while</span><span style="color: #ff0000;">(</span><span style="color: #000000;">i </span><span style="color: #ff0000;">&lt; </span><span style="color: #000000;">j and </span><span style="color: #ff0000;">*</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">i</span><span style="color: #ff0000;">] &lt;= *</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">r</span><span style="color: #ff0000;">]) </span><span style="color: #000000;">i</span><span style="color: #ff0000;">++;</span>
+<span> 43                  </span><span style5="" style="color: #0000a0; font-weight: bold;">while</span><span style="color: #ff0000;">(</span><span style="color: #000000;">i </span><span style="color: #ff0000;">&lt; </span><span style="color: #000000;">j and </span><span style="color: #ff0000;">*</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">j</span><span style="color: #ff0000;">] &gt;= *</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">r</span><span style="color: #ff0000;">]) </span><span style="color: #000000;">j</span><span style="color: #ff0000;">--;</span>
+<span> 44  </span>
+<span> 45                  </span><span style5="" style="color: #0000a0; font-weight: bold;">if</span><span style="color: #ff0000;">(</span><span style="color: #000000;">i </span><span style="color: #ff0000;">!= </span><span style="color: #000000;">j</span><span style="color: #ff0000;">) </span><span style="color: #00a000; font-weight: bold;">std</span><span style="color: #ff0000;">::</span><span style="color: #00a000; font-weight: bold;">swap</span><span style="color: #ff0000;">(</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">i</span><span style="color: #ff0000;">], </span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">j</span><span style="color: #ff0000;">]);</span>
+<span> 46                  </span><span style="color: #ff0000;">}</span>
+<span> 47  </span>
+<span> 48              </span><span style5="" style="color: #0000a0; font-weight: bold;">if</span><span style="color: #ff0000;">(</span><span style="color: #000000;">i </span><span style="color: #ff0000;">!= </span><span style="color: #000000;">r</span><span style="color: #ff0000;">) </span><span style="color: #00a000; font-weight: bold;">std</span><span style="color: #ff0000;">::</span><span style="color: #00a000; font-weight: bold;">swap</span><span style="color: #ff0000;">(</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">i</span><span style="color: #ff0000;">], </span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">r</span><span style="color: #ff0000;">]);</span>
+<span> 49  </span>
+<span> 50              </span><span style5="" style="color: #0000a0; font-weight: bold;">if</span><span style="color: #ff0000;">(</span><span style="color: #000000;">i </span><span style="color: #ff0000;">&gt; </span><span style="color: #000000;">l</span><span style="color: #ff0000;">) </span><span style="color: #000000;">sortData</span><span style="color: #ff0000;">(</span><span style="color: #000000;">l</span><span style="color: #ff0000;">, </span><span style="color: #000000;">i </span><span style="color: #ff0000;">- </span><span style4="" style="color: #f000f0;">1</span><span style="color: #ff0000;">);</span>
+<span> 51  </span>
+<span> 52              </span><span style5="" style="color: #0000a0; font-weight: bold;">if</span><span style="color: #ff0000;">(</span><span style="color: #000000;">i </span><span style="color: #ff0000;">&lt; </span><span style="color: #000000;">j</span><span style="color: #ff0000;">) </span><span style="color: #000000;">sortData</span><span style="color: #ff0000;">(</span><span style="color: #000000;">i </span><span style="color: #ff0000;">+ </span><span style4="" style="color: #f000f0;">1</span><span style="color: #ff0000;">, </span><span style="color: #000000;">j</span><span style="color: #ff0000;">);</span>
+<span> 53              </span><span style="color: #ff0000;">}</span>
+<span> 54  </span>
+<span> 55      </span><span style5="" style="color: #0000a0; font-weight: bold;">public</span><span style="color: #ff0000;">:</span>
+<span> 56          </span><span style5="" style="color: #0000a0; font-weight: bold;">class </span><span style="color: #000000;">ListException </span><span style="color: #ff0000;">: </span><span style5="" style="color: #0000a0; font-weight: bold;">public </span><span style="color: #00a000; font-weight: bold;">std</span><span style="color: #ff0000;">::</span><span style="color: #00a000; font-weight: bold;">exception </span><span style="color: #ff0000;">{</span>
+<span> 57              </span><span style5="" style="color: #0000a0; font-weight: bold;">private</span><span style="color: #ff0000;">:</span>
+<span> 58                  </span><span style="color: #00a000; font-weight: bold;">std</span><span style="color: #ff0000;">::</span><span style="color: #00a000; font-weight: bold;">string </span><span style="color: #000000;">msg</span><span style="color: #ff0000;">;</span>
+<span> 59  </span>
+<span> 60              </span><span style5="" style="color: #0000a0; font-weight: bold;">public</span><span style="color: #ff0000;">:</span>
+<span> 61                  </span><span style5="" style="color: #0000a0; font-weight: bold;">explicit </span><span style="color: #000000;">ListException</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">const char</span><span style="color: #ff0000;">* </span><span style="color: #000000;">message</span><span style="color: #ff0000;">) : </span><span style="color: #000000;">msg</span><span style="color: #ff0000;">(</span><span style="color: #000000;">message</span><span style="color: #ff0000;">) { }</span>
+<span> 62                  </span><span style5="" style="color: #0000a0; font-weight: bold;">explicit </span><span style="color: #000000;">ListException</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">const </span><span style="color: #00a000; font-weight: bold;">std</span><span style="color: #ff0000;">::</span><span style="color: #00a000; font-weight: bold;">string</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">message</span><span style="color: #ff0000;">) : </span><span style="color: #000000;">msg</span><span style="color: #ff0000;">(</span><span style="color: #000000;">message</span><span style="color: #ff0000;">) { }</span>
+<span> 63                  </span><span style5="" style="color: #0000a0; font-weight: bold;">virtual </span><span style="color: #ff0000;">~</span><span style="color: #000000;">ListException</span><span style="color: #ff0000;">() </span><span style5="" style="color: #0000a0; font-weight: bold;">throw </span><span style="color: #ff0000;">() { }</span>
+<span> 64                  </span><span style5="" style="color: #0000a0; font-weight: bold;">virtual const char</span><span style="color: #ff0000;">* </span><span style="color: #000000;">what</span><span style="color: #ff0000;">() </span><span style5="" style="color: #0000a0; font-weight: bold;">const throw </span><span style="color: #ff0000;">() { </span><span style5="" style="color: #0000a0; font-weight: bold;">return </span><span style="color: #000000;">msg</span><span style="color: #ff0000;">.</span><span style="color: #000000;">c_str</span><span style="color: #ff0000;">(); }</span>
+<span> 65              </span><span style="color: #ff0000;">};</span>
+<span> 66  </span>
+<span> 67          </span><span style="color: #000000;">List</span><span style="color: #ff0000;">() {</span>
+<span> 68              </span><span style5="" style="color: #0000a0; font-weight: bold;">if</span><span style="color: #ff0000;">((</span><span style="color: #000000;">data </span><span style="color: #ff0000;">= </span><span style5="" style="color: #0000a0; font-weight: bold;">new </span><span style="color: #000000;">T</span><span style="color: #ff0000;">*[</span><span style="color: #000000;">ARRAYSIZE</span><span style="color: #ff0000;">]) == </span><span style5="" style="color: #0000a0; font-weight: bold;">nullptr</span><span style="color: #ff0000;">) </span><span style5="" style="color: #0000a0; font-weight: bold;">throw </span><span style="color: #000000;">ListException</span><span style="color: #ff0000;">(</span><span style6="" style="color: #0000ff;">"Something went wrong in List constructor, memory not available"</span><span style="color: #ff0000;">);</span>
+<span> 69  </span>
+<span> 70  </span>
+<span> 71              </span><span style5="" style="color: #0000a0; font-weight: bold;">for</span><span style="color: #ff0000;">(</span><span style="color: #000000;">last </span><span style="color: #ff0000;">= </span><span style="color: #000000;">ARRAYSIZE</span><span style="color: #ff0000;">; </span><span style="color: #000000;">last </span><span style="color: #ff0000;">&gt;= </span><span style4="" style="color: #f000f0;">0</span><span style="color: #ff0000;">; </span><span style="color: #000000;">data</span><span style="color: #ff0000;">[--</span><span style="color: #000000;">last</span><span style="color: #ff0000;">] = </span><span style5="" style="color: #0000a0; font-weight: bold;">nullptr</span><span style="color: #ff0000;">);</span>
+<span> 72              </span><span style="color: #ff0000;">}</span>
+<span> 73  </span>
+<span> 74          </span><span style="color: #000000;">List</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">const </span><span style="color: #000000;">List</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">l</span><span style="color: #ff0000;">) : </span><span style="color: #000000;">List</span><span style="color: #ff0000;">() {</span>
+<span> 75              </span><span style="color: #000000;">copyAll</span><span style="color: #ff0000;">(</span><span style="color: #000000;">l</span><span style="color: #ff0000;">);</span>
+<span> 76              </span><span style="color: #ff0000;">}</span>
+<span> 77  </span>
+<span> 78          </span><span style="color: #ff0000;">~</span><span style="color: #000000;">List</span><span style="color: #ff0000;">() {</span>
+<span> 79              </span><span style="color: #000000;">deleteAll</span><span style="color: #ff0000;">();</span>
+<span> 80  </span>
+<span> 81              </span><span style5="" style="color: #0000a0; font-weight: bold;">delete</span><span style="color: #ff0000;">[] *</span><span style="color: #000000;">data</span><span style="color: #ff0000;">;</span>
+<span> 82              </span><span style="color: #ff0000;">}</span>
+<span> 83  </span>
+<span> 84          </span><span style5="" style="color: #0000a0; font-weight: bold;">bool </span><span style="color: #000000;">isEmpty</span><span style="color: #ff0000;">() {</span>
+<span> 85              </span><span style5="" style="color: #0000a0; font-weight: bold;">return </span><span style="color: #000000;">last </span><span style="color: #ff0000;">== -</span><span style4="" style="color: #f000f0;">1</span><span style="color: #ff0000;">;</span>
+<span> 86              </span><span style="color: #ff0000;">}</span>
+<span> 87  </span>
+<span> 88          </span><span style5="" style="color: #0000a0; font-weight: bold;">bool </span><span style="color: #000000;">isFull</span><span style="color: #ff0000;">() {</span>
+<span> 89              </span><span style5="" style="color: #0000a0; font-weight: bold;">return </span><span style="color: #000000;">last </span><span style="color: #ff0000;">== </span><span style="color: #000000;">ARRAYSIZE </span><span style="color: #ff0000;">- </span><span style4="" style="color: #f000f0;">1</span><span style="color: #ff0000;">;</span>
+<span> 90              </span><span style="color: #ff0000;">}</span>
+<span> 91  </span>
+<span> 92          </span><span style5="" style="color: #0000a0; font-weight: bold;">void </span><span style="color: #000000;">insertData</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">p</span><span style="color: #ff0000;">, </span><span style5="" style="color: #0000a0; font-weight: bold;">const </span><span style="color: #000000;">T</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">e</span><span style="color: #ff0000;">) {</span>
+<span> 93              </span><span style5="" style="color: #0000a0; font-weight: bold;">if</span><span style="color: #ff0000;">(</span><span style="color: #000000;">isFull</span><span style="color: #ff0000;">()) </span><span style5="" style="color: #0000a0; font-weight: bold;">throw </span><span style="color: #000000;">ListException</span><span style="color: #ff0000;">(</span><span style6="" style="color: #0000ff;">"Can not insert data in a full List"</span><span style="color: #ff0000;">);</span>
+<span> 94  </span>
+<span> 95              </span><span style5="" style="color: #0000a0; font-weight: bold;">if</span><span style="color: #ff0000;">(</span><span style="color: #000000;">p </span><span style="color: #ff0000;">!= -</span><span style4="" style="color: #f000f0;">1 </span><span style="color: #000000;">and </span><span style="color: #ff0000;">!</span><span style="color: #000000;">isValidPos</span><span style="color: #ff0000;">(</span><span style="color: #000000;">p</span><span style="color: #ff0000;">)) </span><span style5="" style="color: #0000a0; font-weight: bold;">throw </span><span style="color: #000000;">ListException</span><span style="color: #ff0000;">(</span><span style6="" style="color: #0000ff;">"There is an invalid position, trying to insert data into List"</span><span style="color: #ff0000;">);</span>
+<span> 96  </span>
+<span> 97              </span><span style5="" style="color: #0000a0; font-weight: bold;">for</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">i </span><span style="color: #ff0000;">= </span><span style="color: #000000;">last</span><span style="color: #ff0000;">++; </span><span style="color: #000000;">i </span><span style="color: #ff0000;">&gt; </span><span style="color: #000000;">p</span><span style="color: #ff0000;">; </span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">i </span><span style="color: #ff0000;">+ </span><span style4="" style="color: #f000f0;">1</span><span style="color: #ff0000;">] = </span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">i</span><span style="color: #ff0000;">]);</span>
+<span> 98  </span>
+<span> 99              </span><span style5="" style="color: #0000a0; font-weight: bold;">if</span><span style="color: #ff0000;">((</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">p </span><span style="color: #ff0000;">+ </span><span style4="" style="color: #f000f0;">1</span><span style="color: #ff0000;">] = </span><span style5="" style="color: #0000a0; font-weight: bold;">new </span><span style="color: #000000;">T</span><span style="color: #ff0000;">(</span><span style="color: #000000;">e</span><span style="color: #ff0000;">)) == </span><span style5="" style="color: #0000a0; font-weight: bold;">nullptr</span><span style="color: #ff0000;">) </span><span style5="" style="color: #0000a0; font-weight: bold;">throw </span><span style="color: #000000;">ListException</span><span style="color: #ff0000;">(</span><span style6="" style="color: #0000ff;">"Something went wrong inserting new data in List"</span><span style="color: #ff0000;">);</span>
+<span>100              </span><span style="color: #ff0000;">}</span>
+<span>101  </span>
+<span>102          </span><span style5="" style="color: #0000a0; font-weight: bold;">void </span><span style="color: #000000;">insertData</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">const </span><span style="color: #000000;">T</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">e</span><span style="color: #ff0000;">) {</span>
+<span>103              </span><span style="color: #000000;">insertData</span><span style="color: #ff0000;">(</span><span style="color: #000000;">getLastPos</span><span style="color: #ff0000;">(), </span><span style="color: #000000;">e</span><span style="color: #ff0000;">);</span>
+<span>104              </span><span style="color: #ff0000;">}</span>
+<span>105  </span>
+<span>106          </span><span style5="" style="color: #0000a0; font-weight: bold;">void </span><span style="color: #000000;">deleteData</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">p</span><span style="color: #ff0000;">) {</span>
+<span>107              </span><span style5="" style="color: #0000a0; font-weight: bold;">if</span><span style="color: #ff0000;">(!</span><span style="color: #000000;">isValidPos</span><span style="color: #ff0000;">(</span><span style="color: #000000;">p</span><span style="color: #ff0000;">)) </span><span style5="" style="color: #0000a0; font-weight: bold;">throw </span><span style="color: #000000;">ListException</span><span style="color: #ff0000;">(</span><span style6="" style="color: #0000ff;">"There is an invalid position, trying to delete data from List"</span><span style="color: #ff0000;">);</span>
+<span>108  </span>
+<span>109              </span><span style5="" style="color: #0000a0; font-weight: bold;">for</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">i </span><span style="color: #ff0000;">= </span><span style="color: #000000;">p</span><span style="color: #ff0000;">; </span><span style="color: #000000;">i </span><span style="color: #ff0000;">&lt; </span><span style="color: #000000;">last</span><span style="color: #ff0000;">; </span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">i</span><span style="color: #ff0000;">] = </span><span style="color: #000000;">data</span><span style="color: #ff0000;">[++</span><span style="color: #000000;">i</span><span style="color: #ff0000;">]);</span>
+<span>110  </span>
+<span>111              </span><span style5="" style="color: #0000a0; font-weight: bold;">delete </span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">last</span><span style="color: #ff0000;">--];</span>
+<span>112              </span><span style="color: #ff0000;">}</span>
+<span>113  </span>
+<span>114          </span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">getFirstPos</span><span style="color: #ff0000;">() {</span>
+<span>115              </span><span style5="" style="color: #0000a0; font-weight: bold;">return </span><span style="color: #000000;">last </span><span style="color: #ff0000;">== -</span><span style4="" style="color: #f000f0;">1 </span><span style="color: #ff0000;">? -</span><span style4="" style="color: #f000f0;">1 </span><span style="color: #ff0000;">: </span><span style4="" style="color: #f000f0;">0</span><span style="color: #ff0000;">;</span>
+<span>116              </span><span style="color: #ff0000;">}</span>
+<span>117  </span>
+<span>118          </span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">getLastPos</span><span style="color: #ff0000;">() {</span>
+<span>119              </span><span style5="" style="color: #0000a0; font-weight: bold;">return </span><span style="color: #000000;">last</span><span style="color: #ff0000;">;</span>
+<span>120              </span><span style="color: #ff0000;">}</span>
+<span>121  </span>
+<span>122          </span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">getPrevPos</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">const int</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">p</span><span style="color: #ff0000;">) {</span>
+<span>123              </span><span style5="" style="color: #0000a0; font-weight: bold;">return </span><span style="color: #000000;">p </span><span style="color: #ff0000;">== </span><span style4="" style="color: #f000f0;">0 </span><span style="color: #000000;">or </span><span style="color: #ff0000;">!</span><span style="color: #000000;">isValidPos</span><span style="color: #ff0000;">(</span><span style="color: #000000;">p</span><span style="color: #ff0000;">) ? -</span><span style4="" style="color: #f000f0;">1 </span><span style="color: #ff0000;">: </span><span style="color: #000000;">p </span><span style="color: #ff0000;">- </span><span style4="" style="color: #f000f0;">1</span><span style="color: #ff0000;">;</span>
+<span>124              </span><span style="color: #ff0000;">}</span>
+<span>125  </span>
+<span>126          </span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">getNextPos</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">const int</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">p</span><span style="color: #ff0000;">) {</span>
+<span>127              </span><span style5="" style="color: #0000a0; font-weight: bold;">return </span><span style="color: #000000;">p </span><span style="color: #ff0000;">== </span><span style="color: #000000;">last or </span><span style="color: #ff0000;">!</span><span style="color: #000000;">isValidPos</span><span style="color: #ff0000;">(</span><span style="color: #000000;">p</span><span style="color: #ff0000;">) ? -</span><span style4="" style="color: #f000f0;">1 </span><span style="color: #ff0000;">: </span><span style="color: #000000;">p </span><span style="color: #ff0000;">+ </span><span style4="" style="color: #f000f0;">1</span><span style="color: #ff0000;">;</span>
+<span>128              </span><span style="color: #ff0000;">}</span>
+<span>129  </span>
+<span>130          </span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">findData</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">const </span><span style="color: #000000;">T</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">e</span><span style="color: #ff0000;">) {</span>
+<span>131              </span><span style5="" style="color: #0000a0; font-weight: bold;">for</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">i </span><span style="color: #ff0000;">= </span><span style4="" style="color: #f000f0;">0</span><span style="color: #ff0000;">; </span><span style="color: #000000;">i </span><span style="color: #ff0000;">&lt;= </span><span style="color: #000000;">last</span><span style="color: #ff0000;">; </span><span style="color: #000000;">i</span><span style="color: #ff0000;">++) </span><span style5="" style="color: #0000a0; font-weight: bold;">if</span><span style="color: #ff0000;">(</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">i</span><span style="color: #ff0000;">] == </span><span style="color: #000000;">e</span><span style="color: #ff0000;">) </span><span style5="" style="color: #0000a0; font-weight: bold;">return </span><span style="color: #000000;">i</span><span style="color: #ff0000;">;</span>
+<span>132  </span>
+<span>133              </span><span style5="" style="color: #0000a0; font-weight: bold;">return </span><span style="color: #ff0000;">-</span><span style4="" style="color: #f000f0;">1</span><span style="color: #ff0000;">;</span>
+<span>134              </span><span style="color: #ff0000;">}</span>
+<span>135  </span>
+<span>136          </span><span style="color: #000000;">T retrieveData</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">const int </span><span style="color: #000000;">p</span><span style="color: #ff0000;">) {</span>
+<span>137              </span><span style5="" style="color: #0000a0; font-weight: bold;">if</span><span style="color: #ff0000;">(!</span><span style="color: #000000;">isValidPos</span><span style="color: #ff0000;">(</span><span style="color: #000000;">p</span><span style="color: #ff0000;">)) </span><span style5="" style="color: #0000a0; font-weight: bold;">throw </span><span style="color: #000000;">ListException</span><span style="color: #ff0000;">(</span><span style6="" style="color: #0000ff;">"Invalid position, trying to retrieve data from List"</span><span style="color: #ff0000;">);</span>
+<span>138  </span>
+<span>139              </span><span style5="" style="color: #0000a0; font-weight: bold;">return </span><span style="color: #ff0000;">*</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">p</span><span style="color: #ff0000;">];</span>
+<span>140              </span><span style="color: #ff0000;">}</span>
+<span>141  </span>
+<span>142          </span><span style5="" style="color: #0000a0; font-weight: bold;">void </span><span style="color: #000000;">sortData</span><span style="color: #ff0000;">() {</span>
+<span>143              </span><span style="color: #000000;">sortData</span><span style="color: #ff0000;">(</span><span style4="" style="color: #f000f0;">0</span><span style="color: #ff0000;">, </span><span style="color: #000000;">last</span><span style="color: #ff0000;">);</span>
+<span>144              </span><span style="color: #ff0000;">}</span>
+<span>145  </span>
+<span>146          </span><span style5="" style="color: #0000a0; font-weight: bold;">void </span><span style="color: #000000;">printData</span><span style="color: #ff0000;">() {</span>
+<span>147              </span><span style5="" style="color: #0000a0; font-weight: bold;">for</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">i </span><span style="color: #ff0000;">= </span><span style4="" style="color: #f000f0;">0</span><span style="color: #ff0000;">; </span><span style="color: #000000;">i </span><span style="color: #ff0000;">&lt;= </span><span style="color: #000000;">last</span><span style="color: #ff0000;">; </span><span style="color: #000000;">i</span><span style="color: #ff0000;">++) </span><span style="color: #00a000; font-weight: bold;">std</span><span style="color: #ff0000;">::</span><span style="color: #00a000; font-weight: bold;">cout </span><span style="color: #ff0000;">&lt;&lt; *</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">i</span><span style="color: #ff0000;">] &lt;&lt; </span><span style="color: #00a000; font-weight: bold;">std</span><span style="color: #ff0000;">::</span><span style="color: #00a000; font-weight: bold;">endl</span><span style="color: #ff0000;">;</span>
+<span>148              </span><span style="color: #ff0000;">}</span>
+<span>149  </span>
+<span>150          </span><span style5="" style="color: #0000a0; font-weight: bold;">void </span><span style="color: #000000;">deleteAll</span><span style="color: #ff0000;">() {</span>
+<span>151              </span><span style5="" style="color: #0000a0; font-weight: bold;">for</span><span style="color: #ff0000;">( ; </span><span style="color: #000000;">last </span><span style="color: #ff0000;">&gt;= </span><span style4="" style="color: #f000f0;">0</span><span style="color: #ff0000;">; </span><span style5="" style="color: #0000a0; font-weight: bold;">delete </span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">last</span><span style="color: #ff0000;">], </span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">last</span><span style="color: #ff0000;">--] = </span><span style5="" style="color: #0000a0; font-weight: bold;">nullptr</span><span style="color: #ff0000;">);</span>
+<span>152              </span><span style="color: #ff0000;">}</span>
+<span>153  </span>
+<span>154          </span><span style="color: #000000;">List</span><span style="color: #ff0000;">&amp; </span><span style5="" style="color: #0000a0; font-weight: bold;">operator </span><span style="color: #ff0000;">= (</span><span style5="" style="color: #0000a0; font-weight: bold;">const </span><span style="color: #000000;">List</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">l</span><span style="color: #ff0000;">) {</span>
+<span>155              </span><span style="color: #000000;">deleteAll</span><span style="color: #ff0000;">();</span>
+<span>156  </span>
+<span>157              </span><span style="color: #000000;">copyAll</span><span style="color: #ff0000;">(</span><span style="color: #000000;">l</span><span style="color: #ff0000;">);</span>
+<span>158  </span>
+<span>159              </span><span style5="" style="color: #0000a0; font-weight: bold;">return </span><span style="color: #ff0000;">*</span><span style5="" style="color: #0000a0; font-weight: bold;">this</span><span style="color: #ff0000;">;</span>
+<span>160              </span><span style="color: #ff0000;">}</span>
+<span>161  </span>
+<span>162          </span><span style5="" style="color: #0000a0; font-weight: bold;">friend </span><span style="color: #00a000; font-weight: bold;">std</span><span style="color: #ff0000;">::</span><span style="color: #000000;">ostream</span><span style="color: #ff0000;">&amp; </span><span style5="" style="color: #0000a0; font-weight: bold;">operator </span><span style="color: #ff0000;">&lt;&lt; (</span><span style="color: #00a000; font-weight: bold;">std</span><span style="color: #ff0000;">::</span><span style="color: #000000;">ostream</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">os</span><span style="color: #ff0000;">, </span><span style="color: #000000;">List</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">l</span><span style="color: #ff0000;">) {</span>
+<span>163              </span><span style5="" style="color: #0000a0; font-weight: bold;">for</span><span style="color: #ff0000;">(</span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">i </span><span style="color: #ff0000;">= </span><span style4="" style="color: #f000f0;">0</span><span style="color: #ff0000;">; </span><span style="color: #000000;">i </span><span style="color: #ff0000;">&lt;= </span><span style="color: #000000;">l</span><span style="color: #ff0000;">.</span><span style="color: #000000;">last</span><span style="color: #ff0000;">; </span><span style="color: #000000;">i</span><span style="color: #ff0000;">++) </span><span style="color: #000000;">os </span><span style="color: #ff0000;">&lt;&lt; </span><span style="color: #000000;">l</span><span style="color: #ff0000;">.</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">i</span><span style="color: #ff0000;">] &lt;&lt; </span><span style="color: #00a000; font-weight: bold;">std</span><span style="color: #ff0000;">::</span><span style="color: #00a000; font-weight: bold;">endl</span><span style="color: #ff0000;">;</span>
+<span>164  </span>
+<span>165              </span><span style5="" style="color: #0000a0; font-weight: bold;">return </span><span style="color: #000000;">os</span><span style="color: #ff0000;">;</span>
+<span>166              </span><span style="color: #ff0000;">}</span>
+<span>167  </span>
+<span>168          </span><span style5="" style="color: #0000a0; font-weight: bold;">friend </span><span style="color: #00a000; font-weight: bold;">std</span><span style="color: #ff0000;">::</span><span style="color: #00a000; font-weight: bold;">istream</span><span style="color: #ff0000;">&amp; </span><span style5="" style="color: #0000a0; font-weight: bold;">operator </span><span style="color: #ff0000;">&gt;&gt; (</span><span style="color: #00a000; font-weight: bold;">std</span><span style="color: #ff0000;">::</span><span style="color: #00a000; font-weight: bold;">istream</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">is</span><span style="color: #ff0000;">, </span><span style="color: #000000;">List</span><span style="color: #ff0000;">&amp; </span><span style="color: #000000;">l</span><span style="color: #ff0000;">) {</span>
+<span>169              </span><span style="color: #000000;">T myT</span><span style="color: #ff0000;">;</span>
+<span>170              </span><span style5="" style="color: #0000a0; font-weight: bold;">int </span><span style="color: #000000;">i </span><span style="color: #ff0000;">= </span><span style4="" style="color: #f000f0;">0</span><span style="color: #ff0000;">;</span>
+<span>171              </span><span style5="" style="color: #0000a0; font-weight: bold;">while </span><span style="color: #ff0000;">(</span><span style="color: #000000;">is </span><span style="color: #ff0000;">&gt;&gt; </span><span style="color: #000000;">myT</span><span style="color: #ff0000;">)</span>
+<span>172                  </span><span style5="" style="color: #0000a0; font-weight: bold;">if</span><span style="color: #ff0000;">((</span><span style="color: #000000;">l</span><span style="color: #ff0000;">.</span><span style="color: #000000;">data</span><span style="color: #ff0000;">[</span><span style="color: #000000;">i</span><span style="color: #ff0000;">++] = </span><span style5="" style="color: #0000a0; font-weight: bold;">new </span><span style="color: #000000;">T</span><span style="color: #ff0000;">(</span><span style="color: #000000;">myT</span><span style="color: #ff0000;">)) == </span><span style5="" style="color: #0000a0; font-weight: bold;">nullptr</span><span style="color: #ff0000;">) </span><span style5="" style="color: #0000a0; font-weight: bold;">throw </span><span style="color: #000000;">ListException</span><span style="color: #ff0000;">(</span><span style6="" style="color: #0000ff;">"There is an invalid position, trying to insert data into List in &gt;&gt; operator"</span><span style="color: #ff0000;">);</span>
+<span>173  </span>
+<span>174              </span><span style5="" style="color: #0000a0; font-weight: bold;">return </span><span style="color: #000000;">is</span><span style="color: #ff0000;">;</span>
+<span>175              </span><span style="color: #ff0000;">}</span>
+<span>176      </span><span style="color: #ff0000;">};</span>
+<span>177  </span>
+<span>178  </span><span style="color: #00a000;">#endif </span><span style2="" style="color: #bebee6;">// LIST_H_INCLUDED</span></span>
+</code></pre></div></div><div class="modified">Última modificación: viernes, 13 de enero de 2017, 08:48</div></div>
+                            <div class="m-t-2 m-b-1">
+<div class="row">
+    <div class="col-md-4">        <div class="pull-left">
+                <a href="https://moodle.estructurasdedatos.net/mod/folder/view.php?id=211&forceview=1" id="prev-activity-link" class=""  classes="btn btn-link"  title="Apuntes" >&#x25C4; Apuntes</a>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="mdl-align">
+            <div class="urlselect">
+    <form method="post" action="https://moodle.estructurasdedatos.net/course/jumpto.php" class="form-inline" id="url_select_f5c1337f39b24e15">
+        <input type="hidden" name="sesskey" value="EwZbvCzfsf">
+            <label for="jump-to-activity" class="sr-only">
+                Ir a...
+            </label>
+        <select id="jump-to-activity"  id="jump-to-activity" class="custom-select urlselect" name="jump">
+                    <option value="" selected>Ir a...</option>
+                    <option value="/mod/forum/view.php?id=200&amp;forceview=1" >Avisos</option>
+                    <option value="/mod/page/view.php?id=201&amp;forceview=1" >Bibliografía Recomendada</option>
+                    <option value="/mod/page/view.php?id=202&amp;forceview=1" >Evaluación</option>
+                    <option value="/mod/page/view.php?id=203&amp;forceview=1" >Contacto</option>
+                    <option value="/mod/folder/view.php?id=211&amp;forceview=1" >Apuntes</option>
+                    <option value="/mod/page/view.php?id=213&amp;forceview=1" >Código Fuente de Collection C++</option>
+                    <option value="/mod/forum/view.php?id=215&amp;forceview=1" >Avisos</option>
+                    <option value="/mod/forum/view.php?id=216&amp;forceview=1" >Preguntas durante el curso</option>
+                    <option value="/mod/assign/view.php?id=218&amp;forceview=1" >Actividad de Aprendizaje 01. Tipos de Dato primitivos y Tipos de Dato Estructurados</option>
+                    <option value="/mod/assign/view.php?id=221&amp;forceview=1" >Actividad de Aprendizaje 02. La anidación estructural: Registros con Arreglos, Arreglos de Registros y Arreglos de Objetos</option>
+                    <option value="/mod/assign/view.php?id=224&amp;forceview=1" >Actividad de Aprendizaje 03. La Lista, implementación estática</option>
+                    <option value="/mod/assign/view.php?id=227&amp;forceview=1" >Actividad de Aprendizaje 04. Aplicación de Pila y Cola</option>
+                    <option value="/mod/assign/view.php?id=230&amp;forceview=1" >Actividad de Aprendizaje 05. Métodos de Búsqueda</option>
+                    <option value="/mod/url/view.php?id=233&amp;forceview=1" >Video de BubbleSort</option>
+                    <option value="/mod/url/view.php?id=234&amp;forceview=1" >Video de ShellSort</option>
+                    <option value="/mod/url/view.php?id=235&amp;forceview=1" >Video de InsertSort</option>
+                    <option value="/mod/url/view.php?id=236&amp;forceview=1" >Video de SelectSort</option>
+                    <option value="/mod/assign/view.php?id=238&amp;forceview=1" >Actividad de Aprendizaje 06. Métodos de ordenamiento iterativos</option>
+                    <option value="/mod/url/view.php?id=241&amp;forceview=1" >Video de Recursividad</option>
+                    <option value="/mod/url/view.php?id=242&amp;forceview=1" >Video de MergeSort</option>
+                    <option value="/mod/url/view.php?id=243&amp;forceview=1" >Video de QuickSort</option>
+                    <option value="/mod/assign/view.php?id=245&amp;forceview=1" >Actividad de Aprendizaje 07. Métodos de ordenamiento recursivos</option>
+                    <option value="/mod/assign/view.php?id=248&amp;forceview=1" >Actividad de Aprendizaje 08. Apuntadores</option>
+                    <option value="/mod/assign/view.php?id=251&amp;forceview=1" >Actividad de Aprendizaje 09. La Lista, implementación dinámica simplemente ligada</option>
+                    <option value="/mod/assign/view.php?id=254&amp;forceview=1" >Actividad de Aprendizaje 10. La Lista, implementación dinámica doblemente ligada</option>
+                    <option value="/mod/assign/view.php?id=257&amp;forceview=1" >Actividad de Aprendizaje 11. La Pila y la Cola, implementación dinámica</option>
+                    <option value="/mod/assign/view.php?id=260&amp;forceview=1" >Actividad de Aprendizaje 12. El Árbol Binario de Búsqueda, implementación dinámica</option>
+                    <option value="/mod/assign/view.php?id=263&amp;forceview=1" >Actividad de Aprendizaje 13. El Árbol AVL, implementación dinámica</option>
+        </select>
+            <noscript>
+                <input type="submit" class="btn btn-secondary" value="Ir">
+            </noscript>
+    </form>
+</div>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="pull-right">
+                <a href="https://moodle.estructurasdedatos.net/mod/page/view.php?id=213&forceview=1" id="next-activity-link" class=""  classes="btn btn-link"  title="Código Fuente de Collection C++" >Código Fuente de Collection C++ &#x25BA;</a>
+
+        </div>
+</div>
+</div>
+</div>
+                            
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div id="nav-drawer" data-region="drawer" class="d-print-none moodle-has-zindex closed" aria-hidden="true" tabindex="-1">
+        <nav class="list-group">
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8" data-key="coursehome" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" >
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">2018B_I5886</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/user/index.php?id=8" data-key="participants" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="90" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-users fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Participantes</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/badges/view.php?type=2&amp;id=8" data-key="badgesview" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-shield fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Insignias</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/admin/tool/lp/coursecompetencies.php?courseid=8" data-key="competencies" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-check-square-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Competencias</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/grade/report/index.php?id=8" data-key="grades" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-table fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Calificaciones</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action active" href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-0" data-key="82" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body font-weight-bold">General</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-1" data-key="83" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">12 de agosto - 18 de agosto</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-2" data-key="84" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">19 de agosto - 25 de agosto</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-3" data-key="85" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">26 de agosto - 1 de septiembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-4" data-key="86" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">2 de septiembre - 8 de septiembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-5" data-key="92" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">9 de septiembre - 15 de septiembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-6" data-key="93" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">16 de septiembre - 22 de septiembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-7" data-key="94" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">23 de septiembre - 29 de septiembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-8" data-key="95" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">30 de septiembre - 6 de octubre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-9" data-key="96" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">7 de octubre - 13 de octubre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-10" data-key="97" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">14 de octubre - 20 de octubre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-11" data-key="100" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">21 de octubre - 27 de octubre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-12" data-key="101" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">28 de octubre - 3 de noviembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-13" data-key="102" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">4 de noviembre - 10 de noviembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-14" data-key="103" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">11 de noviembre - 17 de noviembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-15" data-key="104" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">18 de noviembre - 24 de noviembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-16" data-key="105" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">25 de noviembre - 1 de diciembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-17" data-key="107" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">2 de diciembre - 8 de diciembre</span>
+                    </div>
+                </div>
+            </a>
+        </nav>
+        <nav class="list-group m-t-1">
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/" data-key="home" data-isexpandable="0" data-indent="0" data-showdivider="1" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="0" data-hidden="0" data-preceedwithhr="0" >
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-home fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Página Principal (home)</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/my/" data-key="home" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="home">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-tachometer fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Tablero</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/calendar/view.php?view=month&amp;course=8" data-key="calendar" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="1">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-calendar fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Calendario</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/user/files.php" data-key="privatefiles" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="1">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-file-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Archivos privados</span>
+                    </div>
+                </div>
+            </a>
+            <div class="list-group-item" data-key="mycourses" data-isexpandable="1" data-indent="0" data-showdivider="0" data-type="0" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="home">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body">Mis cursos</span>
+                    </div>
+                </div>
+            </div>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8" data-key="8" data-isexpandable="1" data-indent="1" data-showdivider="0" data-type="20" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+                <div class="m-l-1">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">2018B_I5886</span>
+                    </div>
+                </div>
+            </a>
+        </nav>
+    </div>
+</div>
+
+<footer id="page-footer" class="py-3 bg-dark text-light">
+    <div class="container">
+        <div id="course-footer"></div>
+
+
+        <div class="logininfo">Usted está ingresado como <a href="https://moodle.estructurasdedatos.net/user/profile.php?id=314" title="Ver perfil">OSCAR SANDOVAL ARELLANO</a> (<a href="https://moodle.estructurasdedatos.net/login/logout.php?sesskey=EwZbvCzfsf">Salir</a>)</div>
+        <div class="tool_usertours-resettourcontainer"></div>
+        <div class="homelink"><a href="https://moodle.estructurasdedatos.net/course/view.php?id=8">2018B_I5886</a></div>
+        <nav class="nav navbar-nav d-md-none">
+                <ul class="list-unstyled pt-3">
+                                    <li><a href="#" title="Idioma">Español - México ‎(es_mx)‎</a></li>
+                                <li>
+                                    <ul class="list-unstyled ml-3">
+                                                        <li><a href="https://moodle.estructurasdedatos.net/mod/page/view.php?id=212&amp;lang=en" title="English ‎(en)‎">English ‎(en)‎</a></li>
+                                                        <li><a href="https://moodle.estructurasdedatos.net/mod/page/view.php?id=212&amp;lang=es_mx" title="Español - México ‎(es_mx)‎">Español - México ‎(es_mx)‎</a></li>
+                                    </ul>
+                                </li>
+                </ul>
+        </nav>
+        <a href="https://download.moodle.org/mobile?version=2018051700&amp;lang=es_mx&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">Obtener la App Mobile</a>
+        <script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'https://moodle.estructurasdedatos.net/lib/requirejs.php/1527034896/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://moodle.estructurasdedatos.net/lib/javascript.php/1527034896/lib/jquery/jquery-3.2.1.min',
+        jqueryui: 'https://moodle.estructurasdedatos.net/lib/javascript.php/1527034896/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://moodle.estructurasdedatos.net/lib/javascript.php/1527034896/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="https://moodle.estructurasdedatos.net/lib/javascript.php/1527034896/lib/requirejs/require.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://moodle.estructurasdedatos.net/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("es",{
+ "Play": "Reproducción",
+ "Play Video": "Reproducción Vídeo",
+ "Pause": "Pausa",
+ "Current Time": "Tiempo reproducido",
+ "Duration Time": "Duración total",
+ "Remaining Time": "Tiempo restante",
+ "Stream Type": "Tipo de secuencia",
+ "LIVE": "DIRECTO",
+ "Loaded": "Cargado",
+ "Progress": "Progreso",
+ "Fullscreen": "Pantalla completa",
+ "Non-Fullscreen": "Pantalla no completa",
+ "Mute": "Silenciar",
+ "Unmute": "No silenciado",
+ "Playback Rate": "Velocidad de reproducción",
+ "Subtitles": "Subtítulos",
+ "subtitles off": "Subtítulos desactivados",
+ "Captions": "Subtítulos especiales",
+ "captions off": "Subtítulos especiales desactivados",
+ "Chapters": "Capítulos",
+ "You aborted the media playback": "Ha interrumpido la reproducción del vídeo.",
+ "A network error caused the media download to fail part-way.": "Un error de red ha interrumpido la descarga del vídeo.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "No se ha podido cargar el vídeo debido a un fallo de red o del servidor o porque el formato es incompatible.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "La reproducción de vídeo se ha interrumpido por un problema de corrupción de datos o porque el vídeo precisa funciones que su navegador no ofrece.",
+ "No compatible source was found for this media.": "No se ha encontrado ninguna fuente compatible con este vídeo."
+});
+
+    });
+});;
+
+require(['jquery'], function($) {
+    $('#single_select5c1337f39b24e3').change(function() {
+        var ignore = $(this).find(':selected').attr('data-ignore');
+        if (typeof ignore === typeof undefined) {
+            $('#single_select_f5c1337f39b24e2').submit();
+        }
+    });
+});
+;
+
+require(['jquery', 'message_popup/message_popover_controller'], function($, controller) {
+    var container = $('#nav-message-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+        require(['jquery'], function($) {
+            $('#jump-to-activity').change(function() {
+                $('#url_select_f5c1337f39b24e15').submit();
+            });
+        });
+    ;
+
+require(['jquery'], function($) {
+    $('#single_select5c1337f39b24e17').change(function() {
+        var ignore = $(this).find(':selected').attr('data-ignore');
+        if (typeof ignore === typeof undefined) {
+            $('#single_select_f5c1337f39b24e16').submit();
+        }
+    });
+});
+;
+
+require(['theme_boost/loader']);
+require(['theme_boost/drawer'], function(mod) {
+    mod.init();
+});
+;
+require(["core/notification"], function(amd) { amd.init(1330, []); });;
+require(["core/log"], function(amd) { amd.setConfig({"level":"warn"}); });
+});
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 Usted seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} archivos de alias\/atajos que emplean este archivo como su or\u00edgen","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random5c1337f39b24e18'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5c1337f39b24e18'); });
+})();
+//]]>
+</script>
+
+    </div>
+</footer>
+</body>
+</html>

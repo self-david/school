@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es-mx" xml:lang="es-mx">
+<head>
+    <title>Tarea</title>
+    <link rel="shortcut icon" href="https://moodle.estructurasdedatos.net/theme/image.php/boost/theme/1527034896/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, Tarea" />
+<link rel="stylesheet" type="text/css" href="https://moodle.estructurasdedatos.net/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://moodle.estructurasdedatos.net/theme/styles.php/boost/1527034896_1/all" />
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/moodle.estructurasdedatos.net","sesskey":"EwZbvCzfsf","themerev":"1527034896","slasharguments":1,"theme":"boost","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1527034896","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Cd de M\u00e9xico","contextid":1339};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/moodle.estructurasdedatos.net\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/moodle.estructurasdedatos.net\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/moodle.estructurasdedatos.net\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/moodle.estructurasdedatos.net\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/moodle.estructurasdedatos.net\/theme\/yui_combo.php?m\/1527034896\/","combine":true,"comboBase":"https:\/\/moodle.estructurasdedatos.net\/theme\/yui_combo.php?","ext":false,"root":"m\/1527034896\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-qtype_ddimageortext-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-qtype_ddimageortext-form":{"requires":["moodle-qtype_ddimageortext-dd","form_filepicker"]},"moodle-qtype_ddmarker-dd":{"requires":["node","event-resize","dd","dd-drop","dd-constrain","graphics"]},"moodle-qtype_ddmarker-form":{"requires":["moodle-qtype_ddmarker-dd","form_filepicker","graphics","escape"]},"moodle-qtype_ddwtos-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_html-button":{"requires":["moodle-editor_atto-plugin","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/moodle.estructurasdedatos.net\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/moodle.estructurasdedatos.net\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1527034896\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/moodle.estructurasdedatos.net\/lib\/javascript.php\/1527034896\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/moodle.estructurasdedatos.net\/lib\/javascript.php\/1527034896\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.2\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body  id="page-mod-assign-view" class="format-weeks  path-mod path-mod-assign safari dir-ltr lang-es_mx yui-skin-sam yui3-skin-sam moodle-estructurasdedatos-net pagelayout-incourse course-8 context-1339 cmid-221 category-4 ">
+
+<div id="page-wrapper">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Saltar a contenido principal</a>
+</div><script type="text/javascript" src="https://moodle.estructurasdedatos.net/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script type="text/javascript" src="https://moodle.estructurasdedatos.net/lib/javascript.php/1527034896/lib/javascript-static.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+    <nav class="fixed-top navbar navbar-light bg-white navbar-expand moodle-has-zindex">
+    
+            <div data-region="drawer-toggle" class="d-inline-block mr-3">
+                <button aria-expanded="false" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left mr-1 btn-secondary" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav"><i class="icon fa fa-bars fa-fw " aria-hidden="true"  aria-label=""></i><span class="sr-only">Pánel lateral</span></button>
+            </div>
+    
+            <a href="https://moodle.estructurasdedatos.net" class="navbar-brand has-logo
+                    ">
+                    <span class="logo d-none d-sm-inline">
+                        <img src="https://moodle.estructurasdedatos.net/pluginfile.php/1/core_admin/logocompact/0x70/1527034896/unnamed.png" alt="EDDNET">
+                    </span>
+                <span class="site-name d-none d-md-inline">EDDNET</span>
+            </a>
+    
+            <ul class="navbar-nav d-none d-md-flex">
+                <!-- custom_menu -->
+                <li class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-5c132371a00915c1323719efe64" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+        Español - México ‎(es_mx)‎
+    </a>
+    <div class="dropdown-menu" aria-labelledby="drop-down-5c132371a00915c1323719efe64">
+                <a class="dropdown-item" href="https://moodle.estructurasdedatos.net/mod/assign/view.php?id=221&amp;rownum=0&amp;useridlistid=5c13237195f91547933019&amp;action&amp;lang=en" title="English ‎(en)‎">English ‎(en)‎</a>
+                <a class="dropdown-item" href="https://moodle.estructurasdedatos.net/mod/assign/view.php?id=221&amp;rownum=0&amp;useridlistid=5c13237195f91547933019&amp;action&amp;lang=es_mx" title="Español - México ‎(es_mx)‎">Español - México ‎(es_mx)‎</a>
+    </div>
+</li>
+                <!-- page_heading_menu -->
+                
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <div class="d-none d-lg-block">
+                
+            </div>
+                <!-- navbar_plugin_output -->
+                <li class="nav-item">
+                <div class="popover-region collapsed popover-region-messages"
+    id="nav-message-popover-container" data-userid="314"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        aria-role="button"
+        aria-controls="popover-region-container-5c132371a03a55c1323719efe65"
+        aria-haspopup="true"
+        aria-label="Mostrar ventana de mensajes sin nuevos mensajes"
+        tabindex="0">
+                <i class="icon fa fa-comment fa-fw " aria-hidden="true" title="Mostrar/Ocultar menú de mensajes" aria-label="Mostrar/Ocultar menú de mensajes"></i>
+        <div class="count-container hidden" data-region="count-container"></div>
+
+    </div>
+    <div 
+        id="popover-region-container-5c132371a03a55c1323719efe65"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Ventana de notificación"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Mensajes</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <div class="newmessage-link">
+            <a href="https://moodle.estructurasdedatos.net/message/index.php?contactsfirst=1">Nuevo mensaje
+            </a>
+        </div>
+        <a class="mark-all-read-button"
+           href="#"
+           role="button"
+           title="Marcar todo como leído"
+           data-action="mark-all-read">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw " aria-hidden="true" title="Marcar todo como leído" aria-label="Marcar todo como leído"></i></span>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " aria-hidden="true" title="Cargando" aria-label="Cargando"></i></span>
+        </a>
+        <a href="https://moodle.estructurasdedatos.net/message/edit.php?id=314"
+           title="Preferencias de Mensaje">
+            <i class="icon fa fa-cog fa-fw " aria-hidden="true" title="Preferencias de Mensaje" aria-label="Preferencias de Mensaje"></i>
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="messages" data-region="messages" role="log" aria-busy="false" aria-atomic="false" aria-relevant="additions"></div>
+        <div class="empty-message" data-region="empty-message" tabindex="0">No hay mensajes</div>
+
+            </div>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " aria-hidden="true" title="Cargando" aria-label="Cargando"></i></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://moodle.estructurasdedatos.net/message/index.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Verlo todo</div>
+                    </div>
+                </a>
+    </div>
+</div><div class="popover-region collapsed popover-region-notifications"
+    id="nav-notification-popover-container" data-userid="314"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        aria-role="button"
+        aria-controls="popover-region-container-5c132371a0f8a5c1323719efe66"
+        aria-haspopup="true"
+        aria-label="Mostrar ventana de notificación sin notificaciones nuevas"
+        tabindex="0">
+                <i class="icon fa fa-bell fa-fw " aria-hidden="true" title="Mostrar/Ocultar menú de notificaciones" aria-label="Mostrar/Ocultar menú de notificaciones"></i>
+        <div class="count-container hidden" data-region="count-container"></div>
+
+    </div>
+    <div 
+        id="popover-region-container-5c132371a0f8a5c1323719efe66"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Ventana de notificación"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notificaciones</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button"
+           href="#"
+           title="Marcar todo como leído"
+           data-action="mark-all-read"
+           role="button">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw " aria-hidden="true" title="Marcar todo como leído" aria-label="Marcar todo como leído"></i></span>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " aria-hidden="true" title="Cargando" aria-label="Cargando"></i></span>
+        </a>
+        <a href="https://moodle.estructurasdedatos.net/message/notificationpreferences.php?userid=314"
+           title="Preferencias de notificación">
+            <i class="icon fa fa-cog fa-fw " aria-hidden="true" title="Preferencias de notificación" aria-label="Preferencias de notificación"></i>
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications"
+            data-region="all-notifications"
+            role="log"
+            aria-busy="false"
+            aria-atomic="false"
+            aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">Usted no tiene notificaciones</div>
+
+            </div>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " aria-hidden="true" title="Cargando" aria-label="Cargando"></i></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://moodle.estructurasdedatos.net/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Verlo todo</div>
+                    </div>
+                </a>
+    </div>
+</div>
+                </li>
+                <!-- user_menu -->
+                <li class="nav-item d-flex align-items-center">
+                    <div class="usermenu"><div class="action-menu moodle-actionmenu nowrap-items d-inline" id="action-menu-1" data-enhance="moodle-core-actionmenu">
+
+        <div class="menubar d-flex " id="action-menu-1-menubar" role="menubar">
+
+            
+
+
+                <div class="action-menu-trigger">
+                    <div class="dropdown">
+                        <a href="#" class=" dropdown-toggle" id="dropdown-1" title="" role="menuitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            
+                            <span class="userbutton"><span class="usertext mr-1">OSCAR SANDOVAL ARELLANO</span><span class="avatars"><span class="avatar current"><img src="https://moodle.estructurasdedatos.net/pluginfile.php/1519/user/icon/boost/f2?rev=104759" alt="Imagen de OSCAR SANDOVAL ARELLANO" title="Imagen de OSCAR SANDOVAL ARELLANO" class="userpicture" width="35" height="35" role="presentation" /></span></span></span>
+                                
+                            <b class="caret"></b>
+                        </a>
+                            <div class="dropdown-menu dropdown-menu-right menu  align-tr-br" id="action-menu-1-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-1" role="menu" data-align="tr-br">
+                                        <a href="https://moodle.estructurasdedatos.net/my/" class="dropdown-item menu-action" role="menuitem" data-title="mymoodle,admin" aria-labelledby="actionmenuaction-1">
+                                                <i class="icon fa fa-tachometer fa-fw " aria-hidden="true" title="Tablero" aria-label="Tablero"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-1">
+                                                Tablero
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="https://moodle.estructurasdedatos.net/user/profile.php?id=314" class="dropdown-item menu-action" role="menuitem" data-title="profile,moodle" aria-labelledby="actionmenuaction-2">
+                                                <i class="icon fa fa-user fa-fw " aria-hidden="true" title="Perfil" aria-label="Perfil"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-2">
+                                                Perfil
+                                            </span>
+                                        </a>
+                                        <a href="https://moodle.estructurasdedatos.net/grade/report/overview/index.php" class="dropdown-item menu-action" role="menuitem" data-title="grades,grades" aria-labelledby="actionmenuaction-3">
+                                                <i class="icon fa fa-table fa-fw " aria-hidden="true" title="Calificaciones" aria-label="Calificaciones"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-3">
+                                                Calificaciones
+                                            </span>
+                                        </a>
+                                        <a href="https://moodle.estructurasdedatos.net/message/index.php" class="dropdown-item menu-action" role="menuitem" data-title="messages,message" aria-labelledby="actionmenuaction-4">
+                                                <i class="icon fa fa-comment fa-fw " aria-hidden="true" title="Mensajes" aria-label="Mensajes"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-4">
+                                                Mensajes
+                                            </span>
+                                        </a>
+                                        <a href="https://moodle.estructurasdedatos.net/user/preferences.php" class="dropdown-item menu-action" role="menuitem" data-title="preferences,moodle" aria-labelledby="actionmenuaction-5">
+                                                <i class="icon fa fa-wrench fa-fw " aria-hidden="true" title="Preferencias" aria-label="Preferencias"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-5">
+                                                Preferencias
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="https://moodle.estructurasdedatos.net/login/logout.php?sesskey=EwZbvCzfsf" class="dropdown-item menu-action" role="menuitem" data-title="logout,moodle" aria-labelledby="actionmenuaction-6">
+                                                <i class="icon fa fa-sign-out fa-fw " aria-hidden="true" title="Salir" aria-label="Salir"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-6">
+                                                Salir
+                                            </span>
+                                        </a>
+                            </div>
+                    </div>
+                </div>
+
+        </div>
+
+</div></div>
+                </li>
+            </ul>
+            <!-- search_box -->
+    </nav>
+    
+
+    <div id="page" class="container-fluid">
+        <header id="page-header" class="row">
+    <div class="col-12 pt-3 pb-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="mr-auto">
+                    <div class="page-context-header"><div class="page-header-headings"><h1>I5886 - Estructuras de Datos I</h1></div></div>
+                    </div>
+
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div id="page-navbar">
+                        <nav role="navigation">
+    <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="https://moodle.estructurasdedatos.net/" >Página Principal (home)</a></li>
+                <li class="breadcrumb-item">Mis cursos</li>
+                <li class="breadcrumb-item"><a href="https://moodle.estructurasdedatos.net/course/view.php?id=8" title="I5886 - Estructuras de Datos I">2018B_I5886</a></li>
+                <li class="breadcrumb-item"><a href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-2" >19 de agosto - 25 de agosto</a></li>
+                <li class="breadcrumb-item"><a href="https://moodle.estructurasdedatos.net/mod/assign/view.php?id=221" title="Tarea">Actividad de Aprendizaje 02. La anidación estructural: Registros con Arreglos, Arreglos de Registros y Arreglos de Objetos</a></li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="ml-auto d-flex">
+                        
+                    </div>
+                    <div id="course-header">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div id="page-content" class="row">
+            <div id="region-main-box" class="col-12">
+                <section id="region-main" >
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="notifications" id="user-notifications"></span>
+                            <div role="main"><span id="maincontent"></span><h2>Actividad de Aprendizaje 02. La anidación estructural: Registros con Arreglos, Arreglos de Registros y Arreglos de Objetos</h2><div id="intro" class="box generalbox boxaligncenter py-3"><div class="no-overflow"><p><b><i>Problema:</i></b></p>
+<p>Haga un programa que sirva para almacenar un inventario, cada producto en el inventario tiene los datos:</p>
+<ul><li>código de barras (cadena con 13 dígitos)<br></li><li>nombre (cadena)<br></li><li>peso (real)<br></li><li>fecha de entrada (clase completa)<br></li><li>precio de mayoreo (real)<br></li><li>precio al menudeo (real)<br></li><li>existencia actual (entero)<br></li></ul><ul>
+</ul>
+<p>El programa debe ofrecer opciones para ingresar nuevo producto, y retirar producto actualizando la cantidad en existencia. Toda operación se hace mediante el código de barras, representado por una cadena numérica de 13 posiciones.</p>
+<p><b><i>Requerimientos:</i></b></p>
+<ol type="a">
+<li>
+<p>El estilo de programación debe ser Orientado a Objetos</p>
+</li>
+<li>
+<p>Pueden entrar nuevos lotes de producto con un código ya existente, actualizando existencia.</p>
+</li>
+<li>
+<p>Cuando un producto se agota queda con cantidad actual en ceros, no es necesario eliminarlo</p>
+</li>
+<li>
+<p>Debe ser posible almacenar al menos 500 entradas de producto</p>
+</li>
+<li>
+<p>Utilice una clase para el manejo de fechas</p>
+</li>
+<li>
+<p>Utilice un registro para todos los datos del producto</p>
+</li>
+<li>
+<p>Utilice un arreglo (de registros) para almacenar los productos</p>
+</li>
+<li>
+<p>Utilice clases independientes y separadas (con sus respectivas relaciones) para:</p>
+</li></ol><ul><ul><ul><ul><li>La fecha</li><li>El producto</li><li>La colección de productos</li><li>El menú</li></ul></ul></ul></ul>
+<p><b><i>Entregables:</i></b></p>
+<p>Un sólo documento PDF que contenga:</p>
+<ol>
+<li>
+<p>Carátula (Nombre de la actividad y datos del alumno)</p>
+</li>
+<li>
+<p>Resumen personal del trabajo realizado, y forma en que fue abordado el problema</p>
+</li>
+<li>
+<p>Código fuente (en texto formateado, no en impresiones de pantalla)</p>
+</li>
+<li>
+<p>Impresiones de pantallas que muestren la ejecución satisfactoria del programa</p>
+</li>
+</ol>
+<p></p></div></div><div class="submissionstatustable"><h3>Estatus de la entrega</h3><div class="box boxaligncenter submissionsummarytable py-3"><table class="generaltable">
+<tbody><tr class="">
+<td class="cell c0" style="">Estatus de la entrega</td>
+<td class="submissionstatussubmitted cell c1 lastcol" style="">Enviado para calificar</td>
+</tr>
+<tr class="">
+<td class="cell c0" style="">Estatus de calificación</td>
+<td class="submissiongraded cell c1 lastcol" style="">Calificado</td>
+</tr>
+<tr class="">
+<td class="cell c0" style="">Fecha de entrega</td>
+<td class="cell c1 lastcol" style="">sábado, 1 de septiembre de 2018, 23:55</td>
+</tr>
+<tr class="">
+<td class="cell c0" style="">Tiempo restante</td>
+<td class="earlysubmission cell c1 lastcol" style="">La tarea fue enviada 36 minutos 39 segundos antes</td>
+</tr>
+<tr class="">
+<td class="cell c0" style="">Última modificación</td>
+<td class="cell c1 lastcol" style="">sábado, 1 de septiembre de 2018, 23:18</td>
+</tr>
+<tr class="">
+<td class="cell c0" style="">Envíos de archivo</td>
+<td class="cell c1 lastcol" style=""><div class="box boxaligncenter plugincontentsummary summary_assignsubmission_file_2711 py-3"><div id="assign_files_tree5c1323719efe618"><ul><li yuiConfig='{"type":"html"}'><div><img class="icon icon" alt="Actividad2.pdf" title="Actividad2.pdf" src="https://moodle.estructurasdedatos.net/theme/image.php/boost/core/1527034896/f/pdf" /> <a target="_blank" href="https://moodle.estructurasdedatos.net/pluginfile.php/1339/assignsubmission_file/submission_files/2711/Actividad2.pdf?forcedownload=1">Actividad2.pdf</a>  </div></li></ul></div></div></td>
+</tr>
+<tr class="lastrow">
+<td class="cell c0" style="">Comentarios al envío</td>
+<td class="cell c1 lastcol" style=""><div class="box boxaligncenter plugincontentsummary summary_assignsubmission_comments_2711 py-3"><div class="commentscontainer"><div style="display:none" id="cmt-tmpl"><div class="comment-message"><div class="comment-message-meta m-r-3"><span class="picture">___picture___</span><span class="user">___name___</span> - <span class="time">___time___</span></div><div class="text">___content___</div></div></div><div class="mdl-left"><a class="showcommentsnonjs" href="https://moodle.estructurasdedatos.net/mod/assign/view.php?id=221&amp;rownum=0&amp;useridlistid=5c13237195f91547933019&amp;action&amp;nonjscomment=1&amp;comment_itemid=2711&amp;comment_context=1339&amp;comment_component=assignsubmission_comments&amp;comment_area=submission_comments">Mostrar comentarios</a><a class="comment-link" id="comment-link-5c132371a9554" href="#" role="button" aria-expanded="false"><i class="icon fa fa-plus-square fa-fw " aria-hidden="true" title="Comentarios" aria-label="Comentarios"></i><span id="comment-link-text-5c132371a9554">Comentarios (0)</span></a><div id="comment-ctrl-5c132371a9554" class="comment-ctrl"><ul id="comment-list-5c132371a9554" class="comment-list"><li class="first"></li></ul><div id="comment-pagination-5c132371a9554" class="comment-pagination"></div><div class="comment-area"><div class="db"><textarea name="content" rows="2" id="dlg-content-5c132371a9554" cols="20"></textarea></div><div class="fd" id="comment-action-5c132371a9554"><a id="comment-action-post-5c132371a9554" href="#">Guardar comentario</a><span> | </span><a id="comment-action-cancel-5c132371a9554" href="#">Cancelar</a></div></div><div class="clearer"></div></div></div></div></div></td>
+</tr>
+</tbody>
+</table>
+</div></div><div class="feedback"><h3>Retroalimentación</h3><div class="box boxaligncenter feedbacktable py-3"><table class="generaltable">
+<tbody><tr class="">
+<td class="cell c0" style="">Calificación</td>
+<td class="cell c1 lastcol" style="">100.00&nbsp;/&nbsp;100.00</td>
+</tr>
+<tr class="">
+<td class="cell c0" style="">Calificado en</td>
+<td class="cell c1 lastcol" style="">lunes, 22 de octubre de 2018, 09:10</td>
+</tr>
+<tr class="lastrow">
+<td class="cell c0" style="">Calificado por</td>
+<td class="cell c1 lastcol" style=""><a href="https://moodle.estructurasdedatos.net/user/view.php?id=3&amp;course=8"><img src="https://moodle.estructurasdedatos.net/pluginfile.php/21/user/icon/boost/f2?rev=15" alt="Imagen de Alfredo Gutierrez" title="Imagen de Alfredo Gutierrez" class="userpicture" width="35" height="35" /></a><img class="icon spacer" width="30" height="1" alt="" src="https://moodle.estructurasdedatos.net/theme/image.php/boost/core/1527034896/spacer" />Alfredo Gutierrez</td>
+</tr>
+</tbody>
+</table>
+</div></div></div>
+                            <div class="m-t-2 m-b-1">
+<div class="row">
+    <div class="col-md-4">        <div class="pull-left">
+                <a href="https://moodle.estructurasdedatos.net/mod/assign/view.php?id=218&forceview=1" id="prev-activity-link" class=""  classes="btn btn-link"  title="Actividad de Aprendizaje 01. Tipos de Dato primitivos y Tipos de Dato Estructurados" >&#x25C4; Actividad de Aprendizaje 01. Tipos de Dato primitivos y Tipos de Dato Estructurados</a>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="mdl-align">
+            <div class="urlselect">
+    <form method="post" action="https://moodle.estructurasdedatos.net/course/jumpto.php" class="form-inline" id="url_select_f5c1323719efe615">
+        <input type="hidden" name="sesskey" value="EwZbvCzfsf">
+            <label for="jump-to-activity" class="sr-only">
+                Ir a...
+            </label>
+        <select id="jump-to-activity"  id="jump-to-activity" class="custom-select urlselect" name="jump">
+                    <option value="" selected>Ir a...</option>
+                    <option value="/mod/forum/view.php?id=200&amp;forceview=1" >Avisos</option>
+                    <option value="/mod/page/view.php?id=201&amp;forceview=1" >Bibliografía Recomendada</option>
+                    <option value="/mod/page/view.php?id=202&amp;forceview=1" >Evaluación</option>
+                    <option value="/mod/page/view.php?id=203&amp;forceview=1" >Contacto</option>
+                    <option value="/mod/folder/view.php?id=211&amp;forceview=1" >Apuntes</option>
+                    <option value="/mod/page/view.php?id=212&amp;forceview=1" >Código Fuente de Lista con Arreglos C++</option>
+                    <option value="/mod/page/view.php?id=213&amp;forceview=1" >Código Fuente de Collection C++</option>
+                    <option value="/mod/forum/view.php?id=215&amp;forceview=1" >Avisos</option>
+                    <option value="/mod/forum/view.php?id=216&amp;forceview=1" >Preguntas durante el curso</option>
+                    <option value="/mod/assign/view.php?id=218&amp;forceview=1" >Actividad de Aprendizaje 01. Tipos de Dato primitivos y Tipos de Dato Estructurados</option>
+                    <option value="/mod/assign/view.php?id=224&amp;forceview=1" >Actividad de Aprendizaje 03. La Lista, implementación estática</option>
+                    <option value="/mod/assign/view.php?id=227&amp;forceview=1" >Actividad de Aprendizaje 04. Aplicación de Pila y Cola</option>
+                    <option value="/mod/assign/view.php?id=230&amp;forceview=1" >Actividad de Aprendizaje 05. Métodos de Búsqueda</option>
+                    <option value="/mod/url/view.php?id=233&amp;forceview=1" >Video de BubbleSort</option>
+                    <option value="/mod/url/view.php?id=234&amp;forceview=1" >Video de ShellSort</option>
+                    <option value="/mod/url/view.php?id=235&amp;forceview=1" >Video de InsertSort</option>
+                    <option value="/mod/url/view.php?id=236&amp;forceview=1" >Video de SelectSort</option>
+                    <option value="/mod/assign/view.php?id=238&amp;forceview=1" >Actividad de Aprendizaje 06. Métodos de ordenamiento iterativos</option>
+                    <option value="/mod/url/view.php?id=241&amp;forceview=1" >Video de Recursividad</option>
+                    <option value="/mod/url/view.php?id=242&amp;forceview=1" >Video de MergeSort</option>
+                    <option value="/mod/url/view.php?id=243&amp;forceview=1" >Video de QuickSort</option>
+                    <option value="/mod/assign/view.php?id=245&amp;forceview=1" >Actividad de Aprendizaje 07. Métodos de ordenamiento recursivos</option>
+                    <option value="/mod/assign/view.php?id=248&amp;forceview=1" >Actividad de Aprendizaje 08. Apuntadores</option>
+                    <option value="/mod/assign/view.php?id=251&amp;forceview=1" >Actividad de Aprendizaje 09. La Lista, implementación dinámica simplemente ligada</option>
+                    <option value="/mod/assign/view.php?id=254&amp;forceview=1" >Actividad de Aprendizaje 10. La Lista, implementación dinámica doblemente ligada</option>
+                    <option value="/mod/assign/view.php?id=257&amp;forceview=1" >Actividad de Aprendizaje 11. La Pila y la Cola, implementación dinámica</option>
+                    <option value="/mod/assign/view.php?id=260&amp;forceview=1" >Actividad de Aprendizaje 12. El Árbol Binario de Búsqueda, implementación dinámica</option>
+                    <option value="/mod/assign/view.php?id=263&amp;forceview=1" >Actividad de Aprendizaje 13. El Árbol AVL, implementación dinámica</option>
+        </select>
+            <noscript>
+                <input type="submit" class="btn btn-secondary" value="Ir">
+            </noscript>
+    </form>
+</div>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="pull-right">
+                <a href="https://moodle.estructurasdedatos.net/mod/assign/view.php?id=224&forceview=1" id="next-activity-link" class=""  classes="btn btn-link"  title="Actividad de Aprendizaje 03. La Lista, implementación estática" >Actividad de Aprendizaje 03. La Lista, implementación estática &#x25BA;</a>
+
+        </div>
+</div>
+</div>
+</div>
+                            
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div id="nav-drawer" data-region="drawer" class="d-print-none moodle-has-zindex closed" aria-hidden="true" tabindex="-1">
+        <nav class="list-group">
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8" data-key="coursehome" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" >
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">2018B_I5886</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/user/index.php?id=8" data-key="participants" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="90" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-users fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Participantes</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/badges/view.php?type=2&amp;id=8" data-key="badgesview" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-shield fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Insignias</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/admin/tool/lp/coursecompetencies.php?courseid=8" data-key="competencies" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-check-square-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Competencias</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/grade/report/index.php?id=8" data-key="grades" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-table fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Calificaciones</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-0" data-key="82" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">General</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-1" data-key="83" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">12 de agosto - 18 de agosto</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action active" href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-2" data-key="84" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body font-weight-bold">19 de agosto - 25 de agosto</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-3" data-key="85" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">26 de agosto - 1 de septiembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-4" data-key="86" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">2 de septiembre - 8 de septiembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-5" data-key="92" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">9 de septiembre - 15 de septiembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-6" data-key="93" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">16 de septiembre - 22 de septiembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-7" data-key="94" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">23 de septiembre - 29 de septiembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-8" data-key="95" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">30 de septiembre - 6 de octubre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-9" data-key="96" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">7 de octubre - 13 de octubre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-10" data-key="97" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">14 de octubre - 20 de octubre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-11" data-key="100" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">21 de octubre - 27 de octubre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-12" data-key="101" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">28 de octubre - 3 de noviembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-13" data-key="102" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">4 de noviembre - 10 de noviembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-14" data-key="103" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">11 de noviembre - 17 de noviembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-15" data-key="104" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">18 de noviembre - 24 de noviembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-16" data-key="105" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">25 de noviembre - 1 de diciembre</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8#section-17" data-key="107" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="30" data-nodetype="1" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="8">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-folder-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">2 de diciembre - 8 de diciembre</span>
+                    </div>
+                </div>
+            </a>
+        </nav>
+        <nav class="list-group m-t-1">
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/" data-key="home" data-isexpandable="0" data-indent="0" data-showdivider="1" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="0" data-hidden="0" data-preceedwithhr="0" >
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-home fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Página Principal (home)</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/my/" data-key="home" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="home">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-tachometer fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Tablero</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/calendar/view.php?view=month&amp;course=8" data-key="calendar" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="1">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-calendar fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Calendario</span>
+                    </div>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/user/files.php" data-key="privatefiles" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="70" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="1">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-file-o fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">Archivos privados</span>
+                    </div>
+                </div>
+            </a>
+            <div class="list-group-item" data-key="mycourses" data-isexpandable="1" data-indent="0" data-showdivider="0" data-type="0" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="home">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body">Mis cursos</span>
+                    </div>
+                </div>
+            </div>
+            <a class="list-group-item list-group-item-action " href="https://moodle.estructurasdedatos.net/course/view.php?id=8" data-key="8" data-isexpandable="1" data-indent="1" data-showdivider="0" data-type="20" data-nodetype="1" data-collapse="0" data-forceopen="1" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+                <div class="m-l-1">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"  aria-label=""></i>
+                        </span>
+                        <span class="media-body ">2018B_I5886</span>
+                    </div>
+                </div>
+            </a>
+        </nav>
+    </div>
+</div>
+
+<footer id="page-footer" class="py-3 bg-dark text-light">
+    <div class="container">
+        <div id="course-footer"></div>
+
+
+        <div class="logininfo">Usted está ingresado como <a href="https://moodle.estructurasdedatos.net/user/profile.php?id=314" title="Ver perfil">OSCAR SANDOVAL ARELLANO</a> (<a href="https://moodle.estructurasdedatos.net/login/logout.php?sesskey=EwZbvCzfsf">Salir</a>)</div>
+        <div class="tool_usertours-resettourcontainer"></div>
+        <div class="homelink"><a href="https://moodle.estructurasdedatos.net/course/view.php?id=8">2018B_I5886</a></div>
+        <nav class="nav navbar-nav d-md-none">
+                <ul class="list-unstyled pt-3">
+                                    <li><a href="#" title="Idioma">Español - México ‎(es_mx)‎</a></li>
+                                <li>
+                                    <ul class="list-unstyled ml-3">
+                                                        <li><a href="https://moodle.estructurasdedatos.net/mod/assign/view.php?id=221&amp;rownum=0&amp;useridlistid=5c13237195f91547933019&amp;action&amp;lang=en" title="English ‎(en)‎">English ‎(en)‎</a></li>
+                                                        <li><a href="https://moodle.estructurasdedatos.net/mod/assign/view.php?id=221&amp;rownum=0&amp;useridlistid=5c13237195f91547933019&amp;action&amp;lang=es_mx" title="Español - México ‎(es_mx)‎">Español - México ‎(es_mx)‎</a></li>
+                                    </ul>
+                                </li>
+                </ul>
+        </nav>
+        <a href="https://download.moodle.org/mobile?version=2018051700&amp;lang=es_mx&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">Obtener la App Mobile</a>
+        <script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'https://moodle.estructurasdedatos.net/lib/requirejs.php/1527034896/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://moodle.estructurasdedatos.net/lib/javascript.php/1527034896/lib/jquery/jquery-3.2.1.min',
+        jqueryui: 'https://moodle.estructurasdedatos.net/lib/javascript.php/1527034896/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://moodle.estructurasdedatos.net/lib/javascript.php/1527034896/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="https://moodle.estructurasdedatos.net/lib/javascript.php/1527034896/lib/requirejs/require.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://moodle.estructurasdedatos.net/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("es",{
+ "Play": "Reproducción",
+ "Play Video": "Reproducción Vídeo",
+ "Pause": "Pausa",
+ "Current Time": "Tiempo reproducido",
+ "Duration Time": "Duración total",
+ "Remaining Time": "Tiempo restante",
+ "Stream Type": "Tipo de secuencia",
+ "LIVE": "DIRECTO",
+ "Loaded": "Cargado",
+ "Progress": "Progreso",
+ "Fullscreen": "Pantalla completa",
+ "Non-Fullscreen": "Pantalla no completa",
+ "Mute": "Silenciar",
+ "Unmute": "No silenciado",
+ "Playback Rate": "Velocidad de reproducción",
+ "Subtitles": "Subtítulos",
+ "subtitles off": "Subtítulos desactivados",
+ "Captions": "Subtítulos especiales",
+ "captions off": "Subtítulos especiales desactivados",
+ "Chapters": "Capítulos",
+ "You aborted the media playback": "Ha interrumpido la reproducción del vídeo.",
+ "A network error caused the media download to fail part-way.": "Un error de red ha interrumpido la descarga del vídeo.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "No se ha podido cargar el vídeo debido a un fallo de red o del servidor o porque el formato es incompatible.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "La reproducción de vídeo se ha interrumpido por un problema de corrupción de datos o porque el vídeo precisa funciones que su navegador no ofrece.",
+ "No compatible source was found for this media.": "No se ha encontrado ninguna fuente compatible con este vídeo."
+});
+
+    });
+});;
+
+require(['jquery'], function($) {
+    $('#single_select5c1323719efe63').change(function() {
+        var ignore = $(this).find(':selected').attr('data-ignore');
+        if (typeof ignore === typeof undefined) {
+            $('#single_select_f5c1323719efe62').submit();
+        }
+    });
+});
+;
+
+require(['jquery', 'message_popup/message_popover_controller'], function($, controller) {
+    var container = $('#nav-message-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+        require(['jquery'], function($) {
+            $('#jump-to-activity').change(function() {
+                $('#url_select_f5c1323719efe615').submit();
+            });
+        });
+    ;
+
+require(['jquery'], function($) {
+    $('#single_select5c1323719efe617').change(function() {
+        var ignore = $(this).find(':selected').attr('data-ignore');
+        if (typeof ignore === typeof undefined) {
+            $('#single_select_f5c1323719efe616').submit();
+        }
+    });
+});
+;
+
+require(['theme_boost/loader']);
+require(['theme_boost/drawer'], function(mod) {
+    mod.init();
+});
+;
+require(["core/notification"], function(amd) { amd.init(1339, []); });;
+require(["core/log"], function(amd) { amd.setConfig({"level":"warn"}); });
+});
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+M.yui.add_module({"mod_assign":{"name":"mod_assign","fullpath":"https:\/\/moodle.estructurasdedatos.net\/lib\/javascript.php\/1527034896\/mod\/assign\/module.js","requires":[]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/moodle.estructurasdedatos.net\/lib\/javascript.php\/1527034896\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]}});
+
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","addcomment":"Agregar un comentario...","comments":"Comentarios","commentscount":"Comentarios ({$a})","commentsrequirelogin":"Usted necesita ingresar para ver los comentarios.","deletecommentbyon":"Eliminar comentario publicado por {$a->user} en {$a->time}","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 Usted seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} archivos de alias\/atajos que emplean este archivo como su or\u00edgen","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random5c1323719efe619'); Y.use('mod_assign', function(Y) { M.mod_assign.init_tree(Y, true, "assign_files_tree5c1323719efe618");  M.util.js_complete('random5c1323719efe619'); });
+ M.util.js_pending('random5c1323719efe620'); Y.on('domready', function() {  M.util.js_pending('random5c1323719efe620'); Y.use('core_comment', function(Y) { M.core_comment.init(Y, {"client_id":"5c132371a9554","commentarea":"submission_comments","itemid":"2711","page":0,"courseid":"8","contextid":1339,"component":"assignsubmission_comments","notoggle":false,"autostart":false});  M.util.js_complete('random5c1323719efe620'); });  M.util.js_complete('random5c1323719efe620'); });
+ M.util.js_pending('random5c1323719efe621'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5c1323719efe621'); });
+})();
+//]]>
+</script>
+
+    </div>
+</footer>
+</body>
+</html>

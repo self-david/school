@@ -1,0 +1,7 @@
+In file included from C:\Users\dagur\Documents\3er Semestre\Estrucutra de datos\Practica 2\list.cpp:7:0:
+C:\Users\dagur\Documents\3er Semestre\Estrucutra de datos\Practica 2\list.hpp:18:3: error: expected unqualified-id before 'public'
+   public:
+   ^~~~~~
+C:\Users\dagur\Documents\3er Semestre\Estrucutra de datos\Practica 2\list.cpp:9:23: error: no 'void List::initialize()' member function declared in class 'List'
+ void List::initialize() {
+                       ^
